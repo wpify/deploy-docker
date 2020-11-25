@@ -1,7 +1,7 @@
 FROM php:7.4-cli
 
 RUN apt -y update && apt -y upgrade
-RUN apt install ssh rsync git libzip-dev unzip -y
+RUN apt install ssh rsync git libzip-dev unzip dh-autoreconf -y
 
 RUN docker-php-source extract \
     && docker-php-ext-install zip \
